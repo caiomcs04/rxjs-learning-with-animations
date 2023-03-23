@@ -1,0 +1,62 @@
+<body class="container">
+  <h1>Reduce</h1>
+  <h3>Input the values you desire the observable receive</h3>
+  <section class="inputs">
+    <input type="number" class="input" [(ngModel)]="firstValue" />
+    <input type="number" class="input" [(ngModel)]="secondValue" />
+    <input type="number" class="input" [(ngModel)]="thirdValue" />
+    <input type="number" class="input" [(ngModel)]="fourthValue" />
+  </section>
+  <section class="graphic card">
+    <h2>Input</h2>
+    <div class="obs-input">
+      <div
+        *ngIf="firstValue || firstValue === 0"
+        class="marble"
+        [@createMarble]
+      >
+        <span>{{ firstValue }}</span>
+      </div>
+      <div
+        *ngIf="secondValue || secondValue === 0"
+        class="marble second"
+        [@createMarble]
+      >
+        <span>{{ secondValue }}</span>
+      </div>
+      <div
+        *ngIf="thirdValue || thirdValue === 0"
+        class="marble third"
+        [@createMarble]
+      >
+        <span>{{ thirdValue }}</span>
+      </div>
+      <div
+        *ngIf="fourthValue || fourthValue === 0"
+        class="marble fourth"
+        [@createMarble]
+      >
+        <span>{{ fourthValue }}</span>
+      </div>
+      <hr />
+    </div>
+    <h3>
+      Reduce
+    </h3>
+    <h2>Output</h2>
+    <div class="obs-input">
+      <div
+        *ngIf="obsOutput || obsOutput === 0"
+        class="marble"
+        [@createMarble]
+      >
+        <span>{{ obsOutput }}</span>
+      </div>
+      <hr />
+    </div>
+    <div class="button-group">
+      <button class="brutal-start" (click)="start()">Start</button>
+      <button class="brutal-reset" (click)="reset()">Reset</button>
+    </div>
+  </section>
+</body>

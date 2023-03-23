@@ -1,0 +1,120 @@
+<body class="container">
+  <h1>Map</h1>
+  <h3>Input the values you desire the observable receive</h3>
+  <section class="inputs">
+    <input type="number" class="input" [(ngModel)]="firstValue" />
+    <input type="number" class="input" [(ngModel)]="secondValue" />
+    <input type="number" class="input" [(ngModel)]="thirdValue" />
+    <input type="number" class="input" [(ngModel)]="fourthValue" />
+  </section>
+  <section>
+    <p>Operation</p>
+    <input
+      type="radio"
+      name="radio"
+      value="+"
+      (change)="onOperationChange($event.target)"
+      id="plus"
+    /><label for="plus">+</label>
+    <input
+      type="radio"
+      name="radio"
+      value="-"
+      (change)="onOperationChange($event.target)"
+      id="minus"
+    /><label for="minus">-</label>
+    <input
+      type="radio"
+      name="radio"
+      value="*"
+      (change)="onOperationChange($event.target)"
+      id="multiply"
+    /><label for="multiply">*</label>
+    <input
+      type="radio"
+      name="radio"
+      value="/"
+      (change)="onOperationChange($event.target)"
+      id="divide"
+    /><label for="divide">/</label>
+  </section>
+  <h3>Input operation value</h3>
+  <input type="number" class="input" [(ngModel)]="operationValue" />
+
+  <section class="graphic card">
+    <h2>Input</h2>
+    <div class="obs-input">
+      <div
+        *ngIf="firstValue || firstValue === 0"
+        class="marble"
+        [@createMarble]
+      >
+        <span>{{ firstValue }}</span>
+      </div>
+      <div
+        *ngIf="secondValue || secondValue === 0"
+        class="marble second"
+        [@createMarble]
+      >
+        <span>{{ secondValue }}</span>
+      </div>
+      <div
+        *ngIf="thirdValue || thirdValue === 0"
+        class="marble third"
+        [@createMarble]
+      >
+        <span>{{ thirdValue }}</span>
+      </div>
+      <div
+        *ngIf="fourthValue || fourthValue === 0"
+        class="marble fourth"
+        [@createMarble]
+      >
+        <span>{{ fourthValue }}</span>
+      </div>
+      <hr />
+    </div>
+    <h3>
+      Operation:
+      <span *ngIf="operation && operationValue"
+        >value {{ operation }} {{ operationValue }}</span
+      >
+    </h3>
+    <h2>Output</h2>
+    <div class="obs-input">
+      <div
+        *ngIf="obsOutput[0] || obsOutput[0] === 0"
+        class="marble output"
+        [@createMarble]
+      >
+        <span>{{ obsOutput[0] }}</span>
+      </div>
+      <div
+        *ngIf="obsOutput[1] || obsOutput[1] === 0"
+        class="marble second"
+        [@createMarble]
+      >
+        <span>{{ obsOutput[1] }}</span>
+      </div>
+      <div
+        *ngIf="obsOutput[2] || obsOutput[2] === 0"
+        class="marble third"
+        [@createMarble]
+      >
+        <span>{{ obsOutput[2] }}</span>
+      </div>
+      <div
+        *ngIf="obsOutput[3] || obsOutput[3] === 0"
+        class="marble fourth"
+        [@createMarble]
+      >
+        <span>{{ obsOutput[3] }}</span>
+      </div>
+      <hr />
+    </div>
+    <div class="button-group">
+      <button class="brutal-start" (click)="start()">Start</button>
+      <button class="brutal-reset" (click)="reset()">Reset</button>
+    </div>
+  </section>
+</body>

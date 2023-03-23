@@ -1,0 +1,190 @@
+h1{
+  font-size: 3rem;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
+  border: none;
+}
+
+
+
+.container{
+  display: flex;
+  flex-direction: column;
+  min-width: 750px;
+}
+
+.inputs{
+  display: flex;
+  gap: 15px;
+}
+
+.input{
+  max-width: 40px;
+}
+
+.graphic{
+  border: 1px solid black;
+  height: 350px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.obs-input{
+margin-top: 45px;
+}
+
+.marble{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -25px;
+  margin-left: 30px;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  transition: 1s;
+
+
+    background: black;
+    background: radial-gradient(circle at 12px 12px, red, #000);
+
+
+
+}
+
+.second{
+  margin-left: 220px;
+}
+
+.third{
+  margin-left: 420px;
+}
+
+.fourth{
+  margin-left: 620px;
+}
+
+.card {
+  padding: 0;
+  margin-top: 25px;
+  border: 3px solid;
+  box-shadow: .5rem .5rem 0;
+  min-height: 470px;
+
+
+  h2,h3{
+    font-size: 25px;
+    margin-left: 15px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 0 0 3px #fff,
+                 0 0 6px #fff,
+                 0 0 9px #fff,
+                 0 0 12px #f00,
+                 0 0 15px #f00,
+                 0 0 18px #f00,
+                 0 0 21px #f00,
+                 0 0 24px #f00;
+    padding: 10px;
+  }
+
+  h3{
+    margin-top: 60px;
+    span{
+      font-family: 'Courier New', monospace;
+      line-height: 1.5;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      background-color: #000;
+      color: #fff;
+      padding: 1rem;
+      margin: 0;
+      border: none;
+      text-shadow: none;
+      margin-left: 15px;
+    }
+  }
+}
+
+.button-group{
+  margin-top: 50px;
+}
+
+.brutal-start{
+  background-color: white;
+  border: 2px solid green;
+  padding:10px 25px;
+  font-weight: bold;
+  font-size:15px;
+  position:relative;
+  color:green;
+  margin-left: 10px;
+}
+
+.brutal-start:after{
+  content:'';
+  position:absolute;
+  background-color:green;
+  top:4px;
+  left:4px;
+  right:-4px;
+  bottom:-4px;
+  z-index:-1;
+}
+
+.brutal-reset{
+  background-color: white;
+  border: 2px solid red;
+  padding:10px 25px;
+  font-weight: bold;
+  font-size:15px;
+  position:relative;
+  color:red;
+  margin-left: 10px;
+}
+
+.brutal-reset:after{
+  content:'';
+  position:absolute;
+  background-color:red;
+  top:4px;
+  left:4px;
+  right:-4px;
+  bottom:-4px;
+  z-index:-1;
+}
+
+.brutal-start:hover{
+  color:white;
+  background-color:green;
+  transition: all 0.3s ease;
+}
+.brutal-start:hover:after{
+  background-color:white;
+  border:2px solid green;
+  transition: all 0.3s ease;
+}
+
+.brutal-reset:hover{
+  color:white;
+  background-color:red;
+  transition: all 0.3s ease;
+}
+.brutal-reset:hover:after{
+  background-color:white;
+  border:2px solid red;
+  transition: all 0.3s ease-in;
+}
